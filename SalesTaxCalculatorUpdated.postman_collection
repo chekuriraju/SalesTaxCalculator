@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "d30f48dd-d341-4c21-8452-98ed2e4e4d9d",
+		"name": "TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CALCULATE TAX BASED ON VALID PRICE AND ZIP CODE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\":1.55,\r\n    \"zipcode\":27006\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1391/TaxCalculator/CalculateTax",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1391",
+					"path": [
+						"TaxCalculator",
+						"CalculateTax"
+					]
+				},
+				"description": "Test Requests for Tax Calculator"
+			},
+			"response": []
+		},
+		{
+			"name": "CALCULATE TAX BASED ON INVALID PRICE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\":sjdhflSDFHsd,\r\n    \"zipcode\":27006\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1391/TaxCalculator/CalculateTax",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1391",
+					"path": [
+						"TaxCalculator",
+						"CalculateTax"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CALCULATE TAX BASED ON NEGATIVE PRICE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\":-1,\r\n    \"zipcode\":27006\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1391/TaxCalculator/CalculateTax",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1391",
+					"path": [
+						"TaxCalculator",
+						"CalculateTax"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CALCULATE TAX BASED ON EMPTY PRICE AND ZIP CODE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\":null,\r\n    \"zipcode\":null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1391/TaxCalculator/CalculateTax",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1391",
+					"path": [
+						"TaxCalculator",
+						"CalculateTax"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CALCULATE TAX BASED ON CORRECT PRICE AND INVALID ZIPCODE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\":5,\r\n    \"zipcode\":adfgadfgadfgadf\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1391/TaxCalculator/CalculateTax",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1391",
+					"path": [
+						"TaxCalculator",
+						"CalculateTax"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CALCULATE TAX BASED ON CORRECT PRICE AND UNAIVALABLE ZIPCODE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\":5,\r\n    \"zipcode\":28262\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1391/TaxCalculator/CalculateTax",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1391",
+					"path": [
+						"TaxCalculator",
+						"CalculateTax"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
